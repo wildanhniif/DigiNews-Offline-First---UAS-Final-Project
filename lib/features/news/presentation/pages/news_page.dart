@@ -18,10 +18,18 @@ class NewsPage extends StatefulWidget {
 class _NewsPageState extends State<NewsPage> {
   String _searchQuery = "";
   final TextEditingController _searchController = TextEditingController();
+  late final NewsBloc _newsBloc;
+
+  @override
+  void initState() {
+    super.initState();
+    _newsBloc = locator<NewsBloc>()..add(const FetchNews());
+  }
 
   @override
   void dispose() {
     _searchController.dispose();
+    _newsBloc.close();
     super.dispose();
   }
 
@@ -30,7 +38,9 @@ class _NewsPageState extends State<NewsPage> {
     final theme = Theme.of(context);
     final primaryColor = EnvConfig.primaryColor;
 
-    return Scaffold(
+    return BlocProvider.value(
+      value: _newsBloc,
+      child: Scaffold(
       appBar: AppBar(
         title: Text(EnvConfig.appName),
         actions: [
@@ -202,8 +212,9 @@ class _NewsPageState extends State<NewsPage> {
           ),
         ],
       ),
-    );
-  }
+    ),
+  );
+}
 
   Widget _buildNewsCard(BuildContext context, NewsArticle article) {
     final theme = Theme.of(context);

@@ -30,12 +30,7 @@ class AppRouter {
       ),
       GoRoute(
         path: '/',
-        builder: (context, state) {
-          return BlocProvider(
-            create: (context) => locator<NewsBloc>()..add(const FetchNews()),
-            child: const NewsPage(),
-          );
-        },
+        builder: (context, state) => const NewsPage(),
       ),
       GoRoute(
         path: '/detail/:id',
