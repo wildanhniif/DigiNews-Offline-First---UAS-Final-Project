@@ -254,7 +254,7 @@ class _ProfilePageState extends State<ProfilePage> {
                               Text(
                                 _reversedNim,
                                 style: TextStyle(
-                                  fontWeight: FontWeight.extrabold,
+                                  fontWeight: FontWeight.w800,
                                   fontSize: 16,
                                   color: Colors.green.shade800,
                                   letterSpacing: 1.0,

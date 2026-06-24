@@ -83,7 +83,7 @@ class NewsDetailPage extends StatelessWidget {
                     title,
                     style: theme.textTheme.titleLarge?.copyWith(
                       fontSize: 22,
-                      fontWeight: FontWeight.extrabold,
+                      fontWeight: FontWeight.w800,
                       height: 1.3,
                     ),
                   ),
