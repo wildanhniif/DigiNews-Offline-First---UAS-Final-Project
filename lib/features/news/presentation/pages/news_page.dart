@@ -111,7 +111,7 @@ class _NewsPageState extends State<NewsPage> {
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(30),
-                  borderSide: BorderSide(color: primaryColor.withOpacity(0.5), width: 1.5),
+                  borderSide: BorderSide(color: primaryColor.withValues(alpha: 0.5), width: 1.5),
                 ),
               ),
             ),
@@ -274,7 +274,7 @@ class _NewsPageState extends State<NewsPage> {
                   child: Container(
                     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                     decoration: BoxDecoration(
-                      color: primaryColor.withOpacity(0.9),
+                      color: primaryColor.withValues(alpha: 0.9),
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: Text(

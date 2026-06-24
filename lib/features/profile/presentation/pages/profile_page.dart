@@ -138,7 +138,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         height: 148,
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
-                          color: primaryColor.withOpacity(0.1),
+                          color: primaryColor.withValues(alpha: 0.1),
                           border: Border.all(color: primaryColor, width: 3),
                         ),
                       ),
@@ -148,7 +148,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           tag: 'profile-avatar',
                           child: CircleAvatar(
                             radius: 68,
-                            backgroundColor: primaryColor.withOpacity(0.2),
+                            backgroundColor: primaryColor.withValues(alpha: 0.2),
                             child: Icon(
                               Icons.face_rounded,
                               size: 96,
@@ -276,7 +276,7 @@ class _ProfilePageState extends State<ProfilePage> {
           // Secret Easter Egg Overlay (Confetti Lottie)
           if (_showEasterEgg)
             Container(
-              color: Colors.black.withOpacity(0.7),
+              color: Colors.black.withValues(alpha: 0.7),
               width: double.infinity,
               height: double.infinity,
               child: Column(
@@ -326,7 +326,7 @@ class _ProfilePageState extends State<ProfilePage> {
       children: [
         CircleAvatar(
           radius: 20,
-          backgroundColor: primaryColor.withOpacity(0.08),
+          backgroundColor: primaryColor.withValues(alpha: 0.08),
           child: Icon(icon, color: primaryColor, size: 20),
         ),
         const SizedBox(width: 16),

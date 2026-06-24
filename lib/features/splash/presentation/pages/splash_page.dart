@@ -76,7 +76,7 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
                     shape: BoxShape.circle,
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(0.2),
+                        color: Colors.black.withValues(alpha: 0.2),
                         blurRadius: 20,
                         offset: const Offset(0, 10),
                       ),
@@ -111,7 +111,7 @@ class _SplashPageState extends State<SplashPage> with SingleTickerProviderStateM
               child: Text(
                 "Offline-First Enterprise News Portal",
                 style: TextStyle(
-                  color: Colors.white.withOpacity(0.7),
+                  color: Colors.white.withValues(alpha: 0.7),
                   fontSize: 14,
                   letterSpacing: 0.5,
                 ),
