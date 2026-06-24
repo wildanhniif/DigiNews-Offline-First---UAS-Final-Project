@@ -13,7 +13,6 @@ class AppTheme {
         primary: primaryColor,
         brightness: Brightness.light,
         surface: const Color(0xFFF8FAFC), // Slate 50
-        background: const Color(0xFFF1F5F9), // Slate 100
       ),
       scaffoldBackgroundColor: const Color(0xFFF8FAFC),
       appBarTheme: AppBarTheme(
@@ -70,7 +69,6 @@ class AppTheme {
         primary: primaryColor,
         brightness: Brightness.dark,
         surface: const Color(0xFF0F172A),
-        background: const Color(0xFF020617),
       ),
       scaffoldBackgroundColor: const Color(0xFF020617),
       appBarTheme: AppBarTheme(

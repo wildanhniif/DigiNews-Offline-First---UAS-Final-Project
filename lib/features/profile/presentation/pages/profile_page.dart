@@ -41,6 +41,7 @@ class _ProfilePageState extends State<ProfilePage> {
       });
     } on PlatformException catch (e) {
       debugPrint("MethodChannel Error: ${e.message}");
+      if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text("Gagal memanggil native: ${e.message}")),
       );
