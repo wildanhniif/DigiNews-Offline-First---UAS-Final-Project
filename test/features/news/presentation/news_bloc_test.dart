@@ -1,6 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import '../../../../test/features/news/data/news_repository_impl_test.dart';
 import 'package:utd_advanced_app/features/news/domain/entities/news_article.dart';
 import 'package:utd_advanced_app/features/news/domain/usecases/get_news.dart';
 import 'package:utd_advanced_app/features/news/presentation/bloc/news_bloc.dart';

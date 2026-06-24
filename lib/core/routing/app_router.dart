@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import '../di/injection.dart';
-import '../../features/news/presentation/bloc/news_bloc.dart';
-import '../../features/news/presentation/bloc/news_event.dart';
 import '../../features/news/presentation/pages/news_page.dart';
 import '../../features/news/presentation/pages/news_detail_page.dart';
 import '../../features/profile/presentation/pages/profile_page.dart';
