@@ -243,22 +243,31 @@ class _NewsPageState extends State<NewsPage> {
             // Gambar Berita
             Stack(
               children: [
-                Image.network(
-                  article.imageUrl,
-                  height: 180,
-                  width: double.infinity,
-                  fit: BoxFit.cover,
-                  errorBuilder: (context, error, stackTrace) {
-                    return Container(
-                      height: 180,
-                      color: Colors.grey.shade200,
-                      child: Center(
-                        child: Icon(Icons.image_not_supported_rounded,
-                            size: 48, color: Colors.grey.shade400),
+                 article.imageUrl.isNotEmpty
+                    ? Image.network(
+                        article.imageUrl,
+                        height: 180,
+                        width: double.infinity,
+                        fit: BoxFit.cover,
+                        errorBuilder: (context, error, stackTrace) {
+                          return Container(
+                            height: 180,
+                            color: Colors.grey.shade200,
+                            child: Center(
+                              child: Icon(Icons.image_not_supported_rounded,
+                                  size: 48, color: Colors.grey.shade400),
+                            ),
+                          );
+                        },
+                      )
+                    : Container(
+                        height: 180,
+                        color: Colors.grey.shade200,
+                        child: Center(
+                          child: Icon(Icons.image_not_supported_rounded,
+                              size: 48, color: Colors.grey.shade400),
+                        ),
                       ),
-                    );
-                  },
-                ),
                 Positioned(
                   top: 12,
                   left: 12,
