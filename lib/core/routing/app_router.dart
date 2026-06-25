@@ -39,7 +39,7 @@ class AppRouter {
           
           return NewsDetailPage(
             articleId: articleId,
-            preloadedArticle: extra is Map<String, dynamic> ? extra : null,
+            preloadedArticle: extra is Map ? Map<String, dynamic>.from(extra) : null,
           );
         },
       ),

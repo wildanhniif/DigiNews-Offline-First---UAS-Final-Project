@@ -243,7 +243,7 @@ class _NewsPageState extends State<NewsPage> {
             // Gambar Berita
             Stack(
               children: [
-                 article.imageUrl.isNotEmpty
+                 (article.imageUrl.isNotEmpty && (article.imageUrl.startsWith('http://') || article.imageUrl.startsWith('https://')))
                     ? Image.network(
                         article.imageUrl,
                         height: 180,

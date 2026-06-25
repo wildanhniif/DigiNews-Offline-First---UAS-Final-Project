@@ -23,7 +23,7 @@ class NewsDetailPage extends StatelessWidget {
     final String newsSite = preloadedArticle?['newsSite'] ?? 'Berita';
     final String url = preloadedArticle?['url'] ?? '';
     final DateTime publishedAt = preloadedArticle?['publishedAt'] != null
-        ? DateTime.tryParse(preloadedArticle!['publishedAt'] as String) ?? DateTime.now()
+        ? DateTime.tryParse(preloadedArticle!['publishedAt'].toString()) ?? DateTime.now()
         : DateTime.now();
 
     final formattedDate = DateFormat('EEEE, dd MMMM yyyy HH:mm').format(publishedAt);
@@ -37,7 +37,7 @@ class NewsDetailPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Gambar Utama Berita
-            if (imageUrl.isNotEmpty)
+            if (imageUrl.isNotEmpty && (imageUrl.startsWith('http://') || imageUrl.startsWith('https://')))
               Image.network(
                 imageUrl,
                 height: 250,
