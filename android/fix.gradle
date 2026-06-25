@@ -1,13 +1,17 @@
 subprojects { project ->
-    project.pluginManager.withPlugin('com.android.library') {
-        project.android {
-            compileSdkVersion 36
-            if (namespace == null) {
-                def ns = project.group.toString()
-                if (ns == null || ns.isEmpty()) {
-                    ns = "dev.fix." + project.name.replaceAll("[^a-zA-Z0-9_]", "_")
+    if (project.name != "app") {
+        project.afterEvaluate {
+            if (project.extensions.findByName("android") != null) {
+                project.android {
+                    compileSdkVersion 36
+                    if (namespace == null) {
+                        def ns = project.group.toString()
+                        if (ns == null || ns.isEmpty()) {
+                            ns = "dev.fix." + project.name.replaceAll("[^a-zA-Z0-9_]", "_")
+                        }
+                        namespace ns
+                    }
                 }
-                namespace ns
             }
         }
     }
